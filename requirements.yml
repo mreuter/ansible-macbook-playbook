@@ -1,7 +1,5 @@
 ---
 
-- name: geerlingguy.homebrew
-
 - name: geerlingguy.mas
 
 - src: https://github.com/feffi/ansible-macos-homebrew.git

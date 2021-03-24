@@ -1,19 +1,20 @@
 ---
 homebrew_installed_packages: []
 
-homebrew_cask_apps:
-  # Tools
-  - docker
-  - tableplus
-  - iterm2
-  # Development
-  - visual-studio-code
-  # Browsers
-  - firefox
-  - eloston-chromium
-  - microsoft-edge
-  # Collaboration
-  - microsoft-teams
+macos_homebrew:
+  casks:
+    # Tools
+    - docker
+    - tableplus
+    - iterm2
+    # Development
+    - visual-studio-code
+    # Browsers
+    - firefox
+    - eloston-chromium
+    - microsoft-edge
+    # Collaboration
+    - microsoft-teams
 
 # Mac App Store Apps to install
 mas_installed_apps:
