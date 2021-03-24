@@ -1,0 +1,9 @@
+---
+homebrew_installed_packages: []
+
+homebrew_cask_apps:
+  - iterm2
+  - visual-studio-code
+  - eloston-chromium
+  - firefox
+  - docker
