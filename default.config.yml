@@ -2,11 +2,18 @@
 homebrew_installed_packages: []
 
 homebrew_cask_apps:
-  - iterm2
-  - visual-studio-code
-  - eloston-chromium
-  - firefox
+  # Tools
   - docker
+  - tableplus
+  - iterm2
+  # Development
+  - visual-studio-code
+  # Browsers
+  - firefox
+  - eloston-chromium
+  - microsoft-edge
+  # Collaboration
+  - microsoft-teams
 
 macos_dock:
   # Full reset/remove all Applications from Dock

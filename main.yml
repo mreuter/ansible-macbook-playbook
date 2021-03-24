@@ -14,5 +14,30 @@
     - role: feffi.macos-dock
       tags: ['dock']
 
+    - role: gantsign.visual-studio-code-extensions
+      users:
+        - visual_studio_code_extensions:
+            - coenraads.bracket-pair-colorizer-2
+            - kisstkondoros.vscode-codemetrics
+            - msjsdiag.debugger-for-chrome
+            - ms-azuretools.vscode-docker
+            - github.vscode-pull-request-github
+            - eamodio.gitlens
+            - orta.vscode-jest
+            - monokai.theme-monokai-pro-vscode
+            - buenon.scratchpads
+            - richie5um2.vscode-sort-json
+            - jock.svg
+            - redhat.vscode-xml
+            - redhat.vscode-yaml
+            - dbaeumer.vscode-eslint
+            - ms-kubernetes-tools.vscode-kubernetes-tools
+            - ghmcadams.lintlens
+            - esbenp.prettier-vscode
+            - jpoissonnier.vscode-styled-components
+          # visual_studio_code_extensions_absent:
+          #   - seanmcbreen.Spell
+
+
   tasks:
     - include_tasks: tasks/set-hostname.yml

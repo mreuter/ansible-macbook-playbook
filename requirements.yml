@@ -7,3 +7,5 @@
   
 - src: https://github.com/feffi/ansible-macos-dock.git
   name: feffi.macos-dock
+
+- name: gantsign.visual-studio-code-extensions
