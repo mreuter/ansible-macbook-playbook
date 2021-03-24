@@ -8,9 +8,6 @@
     - role: feffi.macos-homebrew
       tags: ['homebrew']
 
-    - role: feffi.macos-ohmyzsh
-      tags: ['zsh']
-
     - role: feffi.macos-dock
       tags: ['dock']
 
