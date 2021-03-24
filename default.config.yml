@@ -19,8 +19,6 @@ macos_homebrew:
   packages: []
 
   # Casks to install or uninstall.
-  casks: []
-
   # Brewfile paths to process
   brews: []
   
