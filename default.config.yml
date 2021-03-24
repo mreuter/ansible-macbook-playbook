@@ -13,6 +13,17 @@ macos_homebrew:
     # Path to install homebrew casks
     cask: /Applications
 
+  taps: []
+
+  # Packages to install or uninstall.
+  packages: []
+
+  # Casks to install or uninstall.
+  casks: []
+
+  # Brewfile paths to process
+  brews: []
+  
   casks:
     # Tools
     - docker
