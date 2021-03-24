@@ -36,3 +36,4 @@
 
   tasks:
     - include_tasks: tasks/set-hostname.yml
+    - include_tasks: tasks/ms-outlook.yml
