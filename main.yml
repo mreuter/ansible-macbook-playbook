@@ -10,7 +10,8 @@
 
     - role: gantsign.visual-studio-code-extensions
       users:
-        - visual_studio_code_extensions:
+        - username: m.reuter
+          visual_studio_code_extensions:
             - coenraads.bracket-pair-colorizer-2
             - kisstkondoros.vscode-codemetrics
             - msjsdiag.debugger-for-chrome
