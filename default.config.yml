@@ -15,6 +15,10 @@ homebrew_cask_apps:
   # Collaboration
   - microsoft-teams
 
+# Mac App Store Apps to install
+mas_installed_apps:
+  - { id: 937984704, name: "Amphetamine" }
+
 macos_dock:
   # Full reset/remove all Applications from Dock
   reset: true
