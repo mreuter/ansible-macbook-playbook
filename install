@@ -1,0 +1,56 @@
+#!/bin/bash
+# Purpose:
+#	- bootstrap machine in order to prepare for ansible playbook run
+
+RELEASE="main"
+DOWNLOAD="https://github.com/mreuter/ansible-macbook-playbook/archive/main.tar.gz"
+
+
+set -e
+
+# Download and install Command Line Tools if no developer tools exist
+#       * previous evaluation didn't work completely, due to gcc binary existing for vanilla os x install
+#       * gcc output on vanilla osx box:
+#       * 'xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install.
+#       * Choose an option in the dialog to download the command line developer tools'
+#
+# Evaluate 2 conditions
+#       * ensure dev tools are installed by checking the output of gcc
+#       * check to see if gcc binary even exists ( original logic )
+# if either of the conditions are met, install dev tools
+
+echo 'Using the following Ansible playbook...'
+echo 'https://github.com/mreuter/ansible-macbook-playbook'
+echo
+echo
+
+if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]]; then
+    echo "Info   | Install   | xcode"
+    xcode-select --install
+fi
+
+# Download and install Homebrew
+if [[ ! -x /usr/local/bin/brew ]]; then
+    echo "Info   | Install   | homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install Ansible using homebrew
+echo "Info   | Install   | Ansible"
+brew install ansible
+
+# Remove old ansible-playbook-mac-dev playbook
+if [[ ! -x /tmp/ansible-playbook-mac-dev.tar.gz ]]; then
+	echo "Info   | Remove  | ansible-macbook-playbook playbook"
+	rm -rf /tmp/ansible-macbook-playbook-$RELEASE
+fi
+
+# Download and run ansible-playbook-mac-dev playbook
+echo "Info   | Download  | ansible-macbook-playbook playbook"
+cd /tmp
+curl -fsSL $DOWNLOAD | tar zxf -
+
+echo "Info   | Run | ansible-macbook-playbook playbook"
+cd /tmp/ansible-macbook-playbook-$RELEASE
+ansible-galaxy install -r requirements.yml
+ansible-playbook main.yml -i inventory -K
