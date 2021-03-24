@@ -7,3 +7,9 @@
   roles:
     - role: geerlingguy.homebrew
       tags: ['homebrew']
+
+    - role: feffi.macos-dock
+      tags: ['dock']
+
+  tasks:
+    - include_tasks: tasks/set-hostname.yml

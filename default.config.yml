@@ -7,3 +7,7 @@ homebrew_cask_apps:
   - eloston-chromium
   - firefox
   - docker
+
+macos_dock:
+  # Full reset/remove all Applications from Dock
+  reset: true
