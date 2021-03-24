@@ -2,5 +2,8 @@
 
 - name: geerlingguy.homebrew
 
+- src: https://github.com/feffi/ansible-macos-ohmyzsh.git
+  name: feffi.macos-ohmyzsh
+  
 - src: https://github.com/feffi/ansible-macos-dock.git
   name: feffi.macos-dock
