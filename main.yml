@@ -5,7 +5,7 @@
       - default.config.yml
 
   roles:
-    - role: feffi.macos-homebrew
+    - role: geerlingguy.homebrew
       tags: ['homebrew']
 
     - role: feffi.macos-dock
