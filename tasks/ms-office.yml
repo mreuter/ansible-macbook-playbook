@@ -1,5 +1,6 @@
-- name: microsoft-office
-  homebrew:
+- name: Install Microsoft Office
+  homebrew_cask:
+    name: microsoft-office
     state: present
 
 - name: OfficeAutoSignIn
