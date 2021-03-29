@@ -1,5 +1,5 @@
 - name: Install Microsoft Office
-  community.general.homebrew:
+  homebrew:
     name: microsoft-office
     state: present
 

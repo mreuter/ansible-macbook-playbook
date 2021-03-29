@@ -5,7 +5,19 @@
       - default.config.yml
 
   collections:
-      - community.general.homebrew
+      - community.general
     
   tasks:
       - include_tasks: tasks/ms-office.yml
+
+  roles:
+      - community.general.homebrew
+      
+      - { role: feffi.macos-computername,
+          macos_computername: {
+            ComputerName: "mbp-safety",
+            HostName: "mbp-safety",
+            LocalHostName: "mbp-safety",
+            NetBIOSName: "mbp-safety"
+          }
+        }
