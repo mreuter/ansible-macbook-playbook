@@ -1,3 +1,4 @@
 ---
 
-- name: community.general
+collections:
+  - name: community.general
