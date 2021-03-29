@@ -1,7 +1,4 @@
 ---
 
-roles:
-  - name: feffi.macos-computername
-
 collections:
   - name: community.general
