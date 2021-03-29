@@ -1,3 +1,7 @@
+- community.general.homebrew:
+    name: microsoft-office
+    state: present
+
 - name: OfficeAutoSignIn
   osx_defaults:
     domain: com.microsoft.office

@@ -1,7 +1,3 @@
 ---
 
-- name: geerlingguy.mas
- 
-- name: geerlingguy.homebrew
- 
-- name: gantsign.visual-studio-code-extensions
+- name: community.general
