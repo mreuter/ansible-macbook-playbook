@@ -4,5 +4,8 @@
   vars_files:
       - default.config.yml
 
+  collections:
+      - community.general.homebrew
+    
   tasks:
-    - include_tasks: tasks/ms-office.yml
+      - include_tasks: tasks/ms-office.yml
