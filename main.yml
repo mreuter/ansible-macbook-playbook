@@ -22,4 +22,6 @@
 
     - include_tasks: tasks/nvm.yml
 
+    - include_tasks: tasks/browsers.yml
+
     - include_tasks: tasks/macos-dock.yml

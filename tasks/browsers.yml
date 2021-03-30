@@ -1,0 +1,7 @@
+- name: Install Browsers
+  homebrew_cask:
+    name:
+      - eloston-chromium
+      - firefox
+      - microsoft-edge
+    state: present

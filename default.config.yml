@@ -4,6 +4,8 @@ dockitems_to_persist:
    path: /Applications/Microsoft Outlook.app
  - name: Microsoft Teams
    path: /Applications/Microsoft Teams.app
+ - name: Firefox
+   path: /Applications/Firefox.app
 
 macos_computername:
     ComputerName: "mbp-marc"
