@@ -3,10 +3,16 @@
 
   vars_files:
       - default.config.yml
-        
+
   tasks:
     - name: Install homebrew
       include_role:
         name: geerlingguy.homebrew
 
     - include_tasks: tasks/ms-office.yml
+
+    - include_tasks: tasks/visual-studio-code.yml
+
+    - include_tasks: tasks/docker.yml
+
+    - include_tasks: tasks/nvm.yml
