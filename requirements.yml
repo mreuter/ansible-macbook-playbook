@@ -3,5 +3,8 @@
 roles:
   - name: geerlingguy.homebrew
 
+  - name: feffi.macos-computername
+    src: https://github.com/feffi/ansible-macos-computername.git
+
 collections:
   - name: community.general

@@ -4,6 +4,9 @@
   vars_files:
       - default.config.yml
 
+  roles:
+     - { role: feffi.macos-computername }
+
   tasks:
     - name: Install homebrew
       include_role:

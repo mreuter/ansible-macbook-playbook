@@ -4,3 +4,9 @@ dockitems_to_persist:
    path: /Applications/Microsoft Outlook.app
  - name: Microsoft Teams
    path: /Applications/Microsoft Teams.app
+
+macos_computername:
+    ComputerName: "mbp-marc"
+    HostName: "mbp-marc"
+    LocalHostName: "mbp-marc"
+    NetBIOSName: "mbp-marc"
