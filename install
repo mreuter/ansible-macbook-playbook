@@ -32,7 +32,7 @@ fi
 
 sudo -H python -m ensurepip
 
-pip install --ignore-installed ansible
+pip install --ignore-installed ansible --user
 
 # Remove old ansible-playbook-mac-dev playbook
 if [[ ! -x /tmp/ansible-playbook-mac-dev.tar.gz ]]; then
