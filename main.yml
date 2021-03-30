@@ -11,6 +11,8 @@
 
     - include_tasks: tasks/ms-office.yml
 
+    - include_tasks: tasks/ms-teams.yml
+
     - include_tasks: tasks/visual-studio-code.yml
 
     - include_tasks: tasks/docker.yml

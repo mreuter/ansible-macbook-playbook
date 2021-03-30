@@ -1,4 +1,6 @@
 ---
 dockitems_to_persist:
- - name: Outlook
+ - name: Microsoft Outlook
    path: /Applications/Microsoft Outlook.app
+ - name: Microsoft Teams
+   path: /Applications/Microsoft Teams.app
