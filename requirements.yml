@@ -1,4 +1,7 @@
 ---
 
+roles:
+  - name: geerlingguy.homebrew
+
 collections:
   - name: community.general

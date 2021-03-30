@@ -5,4 +5,8 @@
       - default.config.yml
         
   tasks:
-      - include_tasks: tasks/ms-office.yml
+    - name: Install homebrew
+      include_role:
+        name: geerlingguy.homebrew
+
+    - include_tasks: tasks/ms-office.yml
