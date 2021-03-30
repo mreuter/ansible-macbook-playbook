@@ -6,6 +6,12 @@ dockitems_to_persist:
    path: /Applications/Microsoft Teams.app
  - name: Firefox
    path: /Applications/Firefox.app
+ - name: 1Password
+   path: /Applications/1Password 7.app
+ - name: iTerm
+   path: /Applications/iTerm.app
+ - name: Miro
+   path: /Applications/Miro.app
 
 macos_computername:
     ComputerName: "mbp-marc"

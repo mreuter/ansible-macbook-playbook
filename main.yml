@@ -24,4 +24,10 @@
 
     - include_tasks: tasks/browsers.yml
 
+    - include_tasks: tasks/iterm2.yml
+
+    - include_tasks: tasks/miro.yml
+
+    - include_tasks: tasks/1password.yml
+
     - include_tasks: tasks/macos-dock.yml
