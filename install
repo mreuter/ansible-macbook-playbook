@@ -24,15 +24,15 @@ echo 'https://github.com/mreuter/ansible-macbook-playbook'
 echo
 echo
 
-# Download and install Homebrew
-if [[ ! -x /usr/local/bin/brew ]]; then
-    echo "Info   | Install   | homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]]; then
+    echo "Info   | Install   | xcode"
+    xcode-select --install
+    sudo xcodebuild -license
 fi
 
-# Install Ansible using homebrew
-echo "Info   | Install   | Ansible"
-brew install ansible
+sudo -H python -m ensurepip
+
+pip install --ignore-installed ansible
 
 # Remove old ansible-playbook-mac-dev playbook
 if [[ ! -x /tmp/ansible-playbook-mac-dev.tar.gz ]]; then

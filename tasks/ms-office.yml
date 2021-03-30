@@ -1,19 +1,20 @@
 - name: Install Microsoft Office
-  homebrew:
+  homebrew_cask:
     name: microsoft-office
     state: present
-
-- name: OfficeAutoSignIn
-  osx_defaults:
-    domain: com.microsoft.office
-    key: OfficeAutoSignIn
-    type: bool
-    value: true
-    state: present
-- name: DefaultEmailAddressOrDomain
-  osx_defaults:
-    domain: com.microsoft.Outlook
-    key: DefaultEmailAddressOrDomain
-    type: string
-    value: m.reuter@absturzsicherung.de
-    state: present
+#
+#- name: OfficeAutoSignIn
+#  osx_defaults:
+#    domain: com.microsoft.office
+#    key: OfficeAutoSignIn
+#    type: bool
+#    value: true
+#    state: present
+#- name: DefaultEmailAddressOrDomain
+#  osx_defaults:
+#    domain: com.microsoft.Outlook
+#    key: DefaultEmailAddressOrDomain
+#    type: string
+#    value: m.reuter@absturzsicherung.de
+#    state: present
+#
