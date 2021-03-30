@@ -29,10 +29,6 @@ if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr
     xcode-select --install
 fi
 
-sudo -H python -m ensurepip
-
-pip install --ignore-installed ansible --user
-
 # Remove old ansible-playbook-mac-dev playbook
 if [[ ! -x /tmp/ansible-playbook-mac-dev.tar.gz ]]; then
 	echo "Info   | Remove  | ansible-macbook-playbook playbook"
@@ -44,7 +40,15 @@ echo "Info   | Download  | ansible-macbook-playbook playbook"
 cd /tmp
 curl -fsSL $DOWNLOAD | tar zxf -
 
+sudo -H python -m ensurepip
+
 echo "Info   | Run | ansible-macbook-playbook playbook"
 cd /tmp/ansible-macbook-playbook-$RELEASE
+
+virtualenv .venv -p python3
+source .venv/bin/activate
+
+pip install --ignore-installed ansible
+
 ansible-galaxy install -r requirements.yml
 ansible-playbook main.yml -i inventory -K
