@@ -1,1 +1,4 @@
 ---
+dockitems_to_persist:
+ - name: Outlook
+   path: /Applications/Microsoft Outlook.app
