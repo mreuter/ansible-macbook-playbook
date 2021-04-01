@@ -1,0 +1,5 @@
+- name: Install TablePlus
+  homebrew_cask:
+    name:
+      - tableplus
+    state: present
