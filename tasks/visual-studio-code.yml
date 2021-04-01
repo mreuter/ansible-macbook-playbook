@@ -13,12 +13,46 @@
 
   when: 'y != []'
 
-- name: Visual Studio Code / Install extensions
+- name: Visual Studio Code / Fira Code / Download Tempdir
+  tempfile:
+    state: directory
+    suffix: build
+  register: firacode_download
+
+- name: Visual Studio Code / Fira Code / Download
+  unarchive:
+    src: https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
+    dest: "{{ firacode_download.path }}"
+    remote_src: yes
+  when: firacode_download.path is defined
+
+- name: Visual Studio Code / Fira Code / Install
+  ansible.builtin.copy:
+    src: "{{ firacode_download.path }}/ttf/"
+    dest: "{{ ansible_env.HOME }}/Library/Fonts"
+  when: firacode_download.path is defined
+
+- name: Visual Studio Code / Fira Code / Delete Tempdir
+  ansible.builtin.file:
+    path: "{{ firacode_download.path }}"
+    state: absent
+  when: firacode_download.path is defined
+
+- name: Visual Studio Code / Configure 
   include_role:
-    name: gantsign.visual-studio-code-extensions
+    name: gantsign.visual-studio-code
   vars:
     users:
       - username: m.reuter
+        visual_studio_code_settings_overwrite: yes
+        visual_studio_code_settings:
+          "workbench.colorTheme": "Monokai Pro (Filter Octagon)"
+          "editor.fontSize": 14
+          "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace"
+          "editor.fontLigatures": true
+          "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons"
+          "editor.renderWhitespace": "trailing"
+          "editor.rulers": [80, 120]
         visual_studio_code_extensions:
           - apollographql.vscode-apollo
           - coenraads.bracket-pair-colorizer-2
