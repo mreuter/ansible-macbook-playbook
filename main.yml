@@ -35,6 +35,8 @@
 
     - include_tasks: tasks/timing.yml
 
+    - include_tasks: tasks/fork.yml
+
     - include_tasks: tasks/1password.yml
 
     - include_tasks: tasks/tableplus.yml
