@@ -1,3 +1,7 @@
+- name: git // Install github cli
+  homebrew:
+    name: gh
+
 - name: Set user.email
   community.general.git_config:
     name: user.email
