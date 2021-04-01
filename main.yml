@@ -16,8 +16,6 @@
 
     - include_tasks: tasks/ms-teams.yml
 
-    - include_tasks: tasks/visual-studio-code.yml
-
     - include_tasks: tasks/docker.yml
 
     - include_tasks: tasks/nvm.yml
@@ -31,5 +29,7 @@
     - include_tasks: tasks/1password.yml
 
     - include_tasks: tasks/macos-dock.yml
+
+    - include_tasks: tasks/visual-studio-code.yml
 
     - include_tasks: tasks/git.yml

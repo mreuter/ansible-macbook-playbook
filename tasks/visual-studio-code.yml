@@ -1,9 +1,19 @@
-- name: Install Visual Studio Code
+- name: Visual Studio Code / Install
   homebrew_cask:
     name: visual-studio-code
     state: present
 
-- name: Install Visual Studio Code extensions
+- name: Visual Studio Code / Add Dock items
+  shell: >
+    dockutil --find '{{ item.name }}' ||
+    dockutil --add '{{ item.path }}'
+  with_items:
+    - name: Visual Studio Code
+      path: /Applications/Visual Studio Code.app
+
+  when: 'y != []'
+
+- name: Visual Studio Code / Install extensions
   include_role:
     name: gantsign.visual-studio-code-extensions
   vars:
