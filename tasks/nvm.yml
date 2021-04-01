@@ -6,12 +6,8 @@
 - name: nvm / Install
   shell: >
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-  args:
-    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 
 - name: nvm / Install yarn
   shell: >
     source {{ ansible_env.HOME }}/.zshrc &&
     npm install -g yarn
-  args:
-    creates: "{{ ansible_env.NVM_BIN }}/yarn"
