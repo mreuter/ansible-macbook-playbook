@@ -6,5 +6,7 @@ roles:
   - name: feffi.macos-computername
     src: https://github.com/feffi/ansible-macos-computername.git
 
+  - name: gantsign.visual-studio-code-extensions
+
 collections:
   - name: community.general

@@ -2,3 +2,33 @@
   homebrew_cask:
     name: visual-studio-code
     state: present
+
+- name: Install Visual Studio Code extensions
+  include_role:
+    name: gantsign.visual-studio-code-extensions
+  vars:
+    users:
+      - username: m.reuter
+        visual_studio_code_extensions:
+          - apollographql.vscode-apollo
+          - coenraads.bracket-pair-colorizer-2
+          - kisstkondoros.vscode-codemetrics
+          - msjsdiag.debugger-for-chrome
+          - ms-azuretools.vscode-docker
+          - dbaeumer.vscode-eslint
+          - github.vscode-pull-request-github
+          - eamodio.gitlens
+          - orta.vscode-jest
+          - ms-vsliveshare.vsliveshare-pack
+          - yzhang.markdown-all-in-one
+          - shd101wyy.markdown-preview-enhanced
+          - monokai.theme-monokai-pro-vscode
+          - esbenp.prettier-vscode
+          - buenon.scratchpads
+          - richie5um2.vscode-sort-json
+          - jock.svg
+          - visualstudioexptteam.vscodeintellicode
+          - ms-vscode.vscode-js-profile-flame
+          - jpoissonnier.vscode-styled-components
+          - redhat.vscode-xml
+          - redhat.vscode-yaml
