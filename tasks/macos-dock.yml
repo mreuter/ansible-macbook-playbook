@@ -3,6 +3,14 @@
     name: dockutil
     state: present
 
+- name: Auto Hide Dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    state: present
+
 - name: Current Dock names
   shell: >
     dockutil --list |
