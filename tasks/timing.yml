@@ -1,0 +1,5 @@
+- name: Install Timing
+  homebrew_cask:
+    name:
+      - timing
+    state: present
