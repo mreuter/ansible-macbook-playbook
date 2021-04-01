@@ -31,3 +31,5 @@
     - include_tasks: tasks/1password.yml
 
     - include_tasks: tasks/macos-dock.yml
+
+    - include_tasks: tasks/git.yml
