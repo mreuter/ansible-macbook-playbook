@@ -5,8 +5,15 @@
       - default.config.yml
 
   roles:
-     - { role: feffi.macos-computername }
+    - role: feffi.macos-computername
 
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: m.reuter
+          oh_my_zsh:
+            theme: robbyrussell
+            plugins:
+              - git
   tasks:
     - name: Install homebrew
       include_role:
