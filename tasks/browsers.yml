@@ -5,3 +5,10 @@
       - firefox
       - microsoft-edge
     state: present
+
+- name: Install defaultbrowser
+  homebrew:
+    name: defaultbrowser
+
+- name: Make Firefox the default browser
+  command: defaultbrowser firefox
